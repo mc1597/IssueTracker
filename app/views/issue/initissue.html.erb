@@ -1,0 +1,7 @@
+
+<body background="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQHezqypXXNutxmw0e1dM7lTiF9JuV--81g3xkpMTZG0OcpIEuG">
+<%= form_tag :controller => 'issue', :action => 'indexissue', :method => "get" do %>
+<%= text_field_tag :search, params[:search], placeholder: "Search Issues" %>
+<%= submit_tag "Search" %>
+<% end %>
+~            

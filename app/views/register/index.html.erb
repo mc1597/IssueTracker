@@ -1,0 +1,40 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+table, th, td {
+ border: 1px solid black;
+ padding: 5px;
+}
+table{
+	border-spacing: 15px;
+}
+</style>
+</head>
+<body>
+<body background="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQHezqypXXNutxmw0e1dM7lTiF9JuV--81g3xkpMTZG0OcpIEuG">
+<% if $users.present? %>
+<table>
+<tr>
+<th>Username</th>
+<th>Email</th>
+</tr>
+	<% $users.each do |user| %>
+	<tr>
+	<td><%= user.username %></td>
+	<td><%= user.email %></td>
+	</tr>
+<% end %>
+</table>
+<% else %>
+<p> No results matching your query </p>
+<% end %>
+<a href="http://localhost:3000/search">Back to search</a><br />
+<% if @signed %>
+<a href="http://localhost:3000/homepagenew">Back to Home</a>
+<% else %>
+<a href="http://localhost:3000/homepage">Back to Home</a>
+<% end %>
+</body>
+</html>

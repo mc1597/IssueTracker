@@ -1,0 +1,26 @@
+
+<body background="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQHezqypXXNutxmw0e1dM7lTiF9JuV--81g3xkpMTZG0OcpIEuG">
+<h1>New Issue</h1>
+<%= form_for @issue, :as => :issue, :url => newissue_path, :method => :put do |f| %>
+        <p>
+                <%= f.label :Project_Name %><br>
+                <%= f.text_field :projname %>
+        </p>
+        <p>
+                <%= f.hidden_field :author, :value => @creator.username %>
+        </p>
+
+        <p>
+                <%= f.label :Content %><br>
+                <%= f.text_area :content %>
+        </p>
+        <p>
+                <%= f.label :To %><br>
+                <%= f.text_field :receiver %>
+        </p>
+
+        <p>
+                <%= f.submit %>
+        </p>
+<% end %>
+

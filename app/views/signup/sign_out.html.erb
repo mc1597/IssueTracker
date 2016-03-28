@@ -1,0 +1,11 @@
+
+<body background="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQHezqypXXNutxmw0e1dM7lTiF9JuV--81g3xkpMTZG0OcpIEuG">
+<%= form_tag :controller => 'signup', :action => 'sign_out', :method => "get" do %>
+<p> Do you want to sign out?</p>
+<%= submit_tag "Logout" %>
+<% end %>
+<% if @signed %>
+<a href="http://localhost:3000/homepagenew">Back to Home</a>
+<% else %>
+<a href="http://localhost:3000/homepage">Back to Home</a>
+<% end %>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>project</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=20">
+<link rel="stylesheet" href="assets/stylesheets/bootstrap.min.css">
+<script src="assets/javascripts/bootstrap.min.js"></script>
+<script src="assets/javascripts/angular_js"></script>
+<script src="assets/javascripts/a.js"></script>
+</head>
+<body background="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQHezqypXXNutxmw0e1dM7lTiF9JuV--81g3xkpMTZG0OcpIEuG">
+<div id="photogallery" >
+<marquee scrollamount="8" direction="left" scrolldelay="2">
+<%= image_tag 'images1.jpeg',:style => "height: 250px" %>
+<%= image_tag 'images2.jpeg',:style => "height: 250px" %>
+<%= image_tag 'images3.jpeg',:style => "height: 250px" %>
+<%= image_tag 'images4.png', :style => "height: 250px" %>
+</marquee>
+</div>
+<div class="btn-group">
+<a href="https://www.facebook.com" class="btn btn-info active" role="button">Facebook</a>
+<a href="https://twitter.com" class="btn btn-primary active" role="button">Twitter</a>
+<a href="https://get.hike.in" class="btn btn-success active" role="button">Hike</a>
+<a href="https://www.yahoo.com" class="btn btn-warning active" role="button">Yahoo</a>
+</div>
+<div class="well sidebar-nav" ng-app="navList">
+<ul class="nav nav-List" ng-controller="navCtrl">
+<li ng-class="navClass('home')"><a href='http://localhost:3000/homepage'>Home</a></li>
+<li ng-class="navClass('signup')"><a href='http://localhost:3000/new_user'>Sign up</a></li>
+<li ng-class="navClass('login')"><a href='http://localhost:3000/sign_in'>Login</a></li>
+<li ng-class="navClass('search')"><a href='http://localhost:3000/search'>Search</a></li>
+<li ng-class="navClass('logout')"><a href='http://localhost:3000/sign_out'>Logout</a></li>
+</ul>
+</div>
+</body>
+</html>

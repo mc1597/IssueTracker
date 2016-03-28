@@ -1,0 +1,20 @@
+
+<body background="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQHezqypXXNutxmw0e1dM7lTiF9JuV--81g3xkpMTZG0OcpIEuG">
+<p>Update Members</p>
+<%= form_for @proj, :as => :proj, :url => newupdate_path, :method => :put do |f| %>
+  <p><b>Information about Project:-</b><br />
+    <%= f.label 'title:' %><br/>
+    <%= f.text_field :title %>
+  </p>
+  <p>
+    <%= f.hidden_field :owner, :value => @maker.username %>
+  </p>
+  <p>
+    <%= f.label 'member:' %><br/>
+    <%= f.text_field :members %>
+  </p>
+  <p><b>Update:-</b><br />
+    <%= f.submit 'Add Member' %>&nbsp;&nbsp;&nbsp;
+    <%= f.submit 'Delete Member' %>
+  </p>
+<% end %>

@@ -1,0 +1,21 @@
+
+<body background="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQHezqypXXNutxmw0e1dM7lTiF9JuV--81g3xkpMTZG0OcpIEuG">
+<p>Update Issues</p>
+<%= form_for @issue, :as => :issue, :url => newupdateissue_path, :method => :put do |f| %>
+  <p><b>Information about Issue:-</b><br />
+    <%= f.label 'Project_Name' %><br/>
+    <%= f.text_field :projname %>
+  </p>
+  <p>
+    <%= f.label 'Issue_Author' %><br/>
+    <%= f.text_field :author %>
+  </p>
+  <p><b>Update:-</b><br />
+    <%= f.label 'New_Content:' %><br/>
+    <%= f.text_area :content %>
+  </p>
+  <p>	
+    <%= f.submit 'Edit Content' %>&nbsp;&nbsp;&nbsp;
+    <%= f.submit 'Delete Issue' %>
+  </p>
+<% end %>

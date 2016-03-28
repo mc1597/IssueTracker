@@ -1,0 +1,17 @@
+
+<body background="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQHezqypXXNutxmw0e1dM7lTiF9JuV--81g3xkpMTZG0OcpIEuG">
+<h3>Search <h3>
+
+<p> Need help?</p>
+<p>Search for:</p>
+<ul>
+<li><a href = "http://localhost:3000/searchuser">Users</a></li>
+<li><a href = "http://localhost:3000/searchproject">Projects</a></li>
+<li><a href = "http://localhost:3000/searchissue">Issues</a></li>
+</ul>
+<br />
+<% if @signed %>
+<a href="http://localhost:3000/homepagenew">Back to Home</a>
+<% else %>
+<a href="http://localhost:3000/homepage">Back to Home</a>
+<% end %>

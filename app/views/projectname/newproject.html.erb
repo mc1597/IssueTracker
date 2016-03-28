@@ -1,0 +1,26 @@
+
+<body background="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQHezqypXXNutxmw0e1dM7lTiF9JuV--81g3xkpMTZG0OcpIEuG">
+<p>Create Project</p>
+<%= form_for @proj, :as => :proj, :url => newproject_path, :method => :put do |f| %>
+  <p>
+    <%= f.label 'title:' %><br/>
+    <%= f.text_field :title %>
+  </p>
+  <p>
+    <%= f.hidden_field :owner, :value => @creator.username %>
+  </p>
+  <p>
+    <%= f.label 'description:' %><br/>
+    <%= f.text_field :description %>
+  </p>
+  <p>
+    <%= f.label 'Settings:' %><br/>
+    <%= f.text_field :settings %>
+  </p>
+  <p>
+    <%= f.submit 'Create Project' %>&nbsp;&nbsp;&nbsp;
+    <%= f.submit 'Clear Form', :type => 'reset' %>
+  </p>
+<% end %>
+<br />
+<a href='http://localhost:3000/homepagenew'>Back to Home</a>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+table, th, td {
+ border: 1px solid black;
+ padding: 5px;
+}
+table{
+	border-spacing: 15px;
+}
+</style>
+</head>
+<body>
+<body background="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQHezqypXXNutxmw0e1dM7lTiF9JuV--81g3xkpMTZG0OcpIEuG">
+<% if $issues.present? %>
+<table>
+<tr>
+<th>Id</th>
+<th>Name</th>
+<th>Author</th>
+<th>Content</th>
+<th>To</th>
+</tr>
+        <% $issues.each do |issue| %>
+        <tr>
+        <td><%= issue.id %></td>
+        <td><%= issue.projname %></td>
+        <td><%= issue.author %></td>
+        <td><%= issue.content %></td>
+        <td><%= issue.receiver %></td>
+        </tr>
+<% end %>
+</table>
+<% else %>
+<p> No results matching your query </p>
+<% end %>
+<a href="http://localhost:3000/search">Back to search</a><br />
+<% if @signed %>
+<a href="http://localhost:3000/homepagenew">Back to Home</a>
+<% else %>
+<a href="http://localhost:3000/homepage">Back to Home</a>
+<% end %>
+</body>
+</html>
+
