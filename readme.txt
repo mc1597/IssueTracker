@@ -1,4 +1,5 @@
-Team members:
+run rails server on terminal
 
-201401208 - Manasa Chakka
-201402230 - Shreya Jain
+LINK:-
+	http://localhost:3000
+
